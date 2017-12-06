@@ -1,12 +1,19 @@
 /*global $*/
+/*global fTemp*/
+/*global cTemp*/
+/*global temp*/
 /*global navigator*/
+
+  
 $(document).ready(function() {
 var data;
 var weather;
 var temp;
 var tempK;
-var tempF;
-var tempC;
+var fTemp;
+var cTemp;
+
+
 
   if (navigator.geolocation) {
      navigator.geolocation.getCurrentPosition(function(position) {
@@ -25,25 +32,16 @@ var tempC;
   var lat = position.coords.latitude;
 
 
+
 $.ajax({
   method: 'GET',
   url: 'https://api.openweathermap.org/data/2.5/weather?&units=imperial',
-  data: {lat: lat, lon: lon, appid:'ae36112ec88d99f153f8a75484b09f50'}, 
+  data: {lat: lat, lon: lon, apiKEY:'ae36112ec88d99f153f8a75484b09f50'}, 
   dataType: "jsonp",
   success: function(data) {
       var displayWeather = display(data);
         $("#data").html(displayWeather);
 
-// $("#city").html(city);
-//  console.log(data);
-//  console.log(data.city[0].name);
-//  // console.log(JSON.stringify(data)); //to string
-
- // var city = this.data.name;
- // city = document.createElement("li");
-	// 					city.innerHTML = city;
- 
-  // $("#tempK").html(tempK);
   
  
  
@@ -56,16 +54,35 @@ $.ajax({
  
  
   }
+  
 }); 
 
 function display(data) {
+    
+    var temp = data.main.temp;
+    var fTemp = data.main.temp;
+    fTemp = (fTemp.toFixed(0));
+    var cTemp;
+    cTemp = (temp - 32) * 5 / 9;
+    cTemp = (cTemp.toFixed(0));
+    $(".switch").html(fTemp);
+     $(".switch2").html(cTemp);
+    
+   
+
     
     return "<h3>City: " + data.name + "</h3>" + "<h3>Main weather: " + data.weather[0].main + "</h3>" + 
     
     
     "<img src='https://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>" + "<h3>Description: " + data.weather[0].description + "</h3>" +
-    "<h3>Temp: " + data.main.temp.toFixed(0) + " &#8457;</h3>" + 
-    "<h3>Humidity: " + data.main.humidity + "</h3>"; 
-    
+    "<h3>Temp: " + fTemp + "&#8457;</h3>" + "<h3>Celcius: " + cTemp + "&#8451;</h3>" +
+    "<h3>Humidity: " + data.main.humidity + "%</h3>"; 
     
 }
+
+$( "#tempSwitch" ).click(function() {
+  
+  $( ".switch" ).toggle();
+  $( "#tempSwitch" ) + $( ".switch2" ).toggle(); 
+  
+});
