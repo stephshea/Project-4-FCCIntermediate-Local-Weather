@@ -1,4 +1,24 @@
 body {
    
-    
+     font-family: 'Noto Sans', sans-serif;
+     color: white;
+}
+
+h1 {
+   
+font-family: 'Merriweather', serif;
+color: #1a52ad;
+color: #fff;
+}
+
+h3 { 
+     font-family: 'Noto Sans', sans-serif;
+}
+
+ul {
+     font-family: 'Noto Sans', sans-serif;
+}
+#tempSwitch {
+    background-color: #1a52ad;
+    color: #ffffff;
 }
