@@ -1,54 +1,56 @@
-<DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://use.fontawesome.com/7946c1480d.js"></script>
-    
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://bootswatch.com/3/cosmo/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/style.css">
-    
-    
-    <style>
-      @media screen and (max-width: 420px) 
-        {
-          h4 {
-            font-size: 90%; 
-          }
-          
-          img-responsive {
-            padding:5px;
-          }
-        }
-        </style>
-
-    <title>Your Local Weather</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<script src="https://use.fontawesome.com/7946c1480d.js">
+	</script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://bootswatch.com/3/cosmo/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans" rel="stylesheet">
+	<link href="assets/style.css" rel="stylesheet">
+	<style>
+	     @media screen and (max-width: 420px) 
+	       {
+	         h1 {
+	           font-size: 1.4em; 
+	         }
+	         
+	         img-responsive {
+	           padding:5px;
+	         }
+	         
+	         #tempSwitch {
+	   padding: .3em;
+	       }
+	       
+	       #weather {
+	   width: 70vw;
+	       }
+	       }
+	</style>
+	<title>Your Local Weather</title>
 </head>
 <body>
-    <div class="container-fluid text-center">
-      
-      <h1>Your Local Weather</h1>
-      
-      <div> 
-      <h2 id="city"></h2>
-<h3 class="switch" style="display:block"></h3>
-<h3 class="switch2" style="display:none"></h3>
-<button id ="tempSwitch">Toggle &#8457/&#8451</button>
-
-       <p id="data"></p>
-    </div> 
-    
-    
-     <script src="https://use.fontawesome.com/d117184189.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="assets/script.js"></script>
-
+	<div class="container-fluid text-center">
+		<div id="weather">
+			<h1>Your Local Weather</h1>
+			<h2 id="city"></h2>
+			<h3 class="switch" style="display:block"></h3>
+			<h3 class="switch2" style="display:none"></h3><button id="tempSwitch">Toggle &#8457/&#8451</button>
+			<p id="data"></p>
+		</div>
+	</div>
+	<script src="https://use.fontawesome.com/d117184189.js">
+	</script> 
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js">
+	</script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script> 
+	<script src="assets/script.js">
+	</script>
 </body>
 </html>
