@@ -1,13 +1,17 @@
+html {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 body {
 	font-family: 'Noto Sans', sans-serif;
 	color: #000;
 	font-weight: bolder;
 	background-repeat: no-repeat;
-
+	background-size: cover;
 }
 #weather {
 	width: 40vw;
-	margin: 3em auto;
+	margin: 1em auto;
 	padding: 1em;
 	border: 3px solid rgba(179, 220, 237);
 	border-radius: 25px;
@@ -21,16 +25,10 @@ body {
 	background: linear-gradient(to right, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 50%, rgba(188, 224, 238, 1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
 }
-/* background: #1a52ad; For browsers that do not support gradients 
-    background: -webkit-linear-gradient(#1a52ad, yellow); /* For Safari 5.1 to 6.0 
-    background: -o-linear-gradient(#1a52ad, yellow); /* For Opera 11.1 to 12.0 
-    background: -moz-linear-gradient(#1a52ad, yellow); /* For Firefox 3.6 to 15 
-    background: linear-gradient(#1a52ad, yellow); /* Standard syntax */
-
 h1 {
 	font-family: 'Merriweather', serif;
 	color: #02388e;
-	margin: 1em auto;
+	/*margin: .5em auto;*/
 }
 h3 {
 	font-family: 'Noto Sans', sans-serif;
@@ -45,7 +43,6 @@ ul {
 	border-radius: 25px;
 	padding: .8em;
 }
-
 #tempSwitchZip {
 	background-color: #02388e;
 	color: #ffffff;
@@ -53,14 +50,12 @@ ul {
 	border-radius: 25px;
 	padding: .8em;
 }
-
 #data {
 	margin-top: 2em;
 }
-
 #zipWeather {
 	width: 40vw;
-	margin: 3em auto;
+	margin: 1em auto;
 	padding: 1em;
 	border: 3px solid rgba(179, 220, 237);
 	border-radius: 25px;
@@ -73,4 +68,11 @@ ul {
 	background: -ms-linear-gradient(left, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 50%, rgba(188, 224, 238, 1) 100%);
 	background: linear-gradient(to right, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 50%, rgba(188, 224, 238, 1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+}
+i {
+	font-size: 3em;
+	margin: .2em auto;
+}
+#now {
+	font-size: .8em;
 }
