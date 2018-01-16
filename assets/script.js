@@ -1,5 +1,6 @@
 /*global $*/
 /*global navigator*/
+/*global APIKEY*/
 $(document).ready(function() {
 	//Get location
 	if (navigator.geolocation) {
@@ -20,7 +21,7 @@ $(document).ready(function() {
 			data: {
 				lat: lat,
 				lon: lon,
-				apiKEY: 'APIKEY'
+				apiKEY: 'ae36112ec88d99f153f8a75484b09f50'
 			},
 			dataType: "jsonp",
 			success: function(data) {
@@ -31,7 +32,13 @@ $(document).ready(function() {
 	}
 
 	function display(data) {
-		var now = new Date();
+// 		var now = new Date();
+// var month = new.getMonth(); 
+// var day = new.getDay();
+// var year = new.getYear();
+
+// now = year + "/" + month + "/" + day;
+
 		var icon = data.weather[0].icon;
 		var wind = data.wind.speed;
 		wind = wind.toFixed(0);
@@ -78,7 +85,7 @@ $(document).ready(function() {
 		}
 		//rain -
 		else if (data.weather[0].icon === "10d") {
-			$('body').css('background-image', 'url(https://media3.giphy.com/media/TVpeXDi8xTlyo/giphy.gif)');
+			$('body').css('background-image', 'url(https://unsplash.com/photos/Nw_D8v79PM4)');
 			$('#icon').attr('class', 'wi wi-day-rain');
 		}
 		//thunderstorm -
@@ -118,12 +125,12 @@ $(document).ready(function() {
 		}
 		//shower rain
 		else if (data.weather[0].icon === "09n") {
-			$('body').css('background-image', 'url(https://media.giphy.com/media/nEKxwMsFLemlO/giphy.gif)');
+			$('body').css('background-image', 'url(https://unsplash.com/photos/Nw_D8v79PM4)');
 			$('#icon').attr('class', 'wi wi-night-alt-showers');
 		}
 		//rain -
 		else if (data.weather[0].icon === "10n") {
-			$('body').css('background-image', 'url(https://media.giphy.com/media/nEKxwMsFLemlO/giphy.gif)');
+			$('body').css('background-image', 'url(https://unsplash.com/photos/Nw_D8v79PM4)');
 			$('#icon').attr('class', 'wi wi-night-rain');
 		}
 		//thunderstorm -
@@ -155,7 +162,7 @@ $(document).ready(function() {
 		var zip = $('#zip').val();
 		if (zip != "") {
 			$.ajax({
-				url: 'https://api.openweathermap.org/data/2.5/weather?zip=' + zip + "&units=imperial" + "&APPID=APIKEY",
+				url: 'https://api.openweathermap.org/data/2.5/weather?zip=' + zip + "&units=imperial" + "&APPID=ae36112ec88d99f153f8a75484b09f50",
 				type: 'GET',
 				dataType: 'json',
 				success: function(abby) {
